@@ -2,9 +2,9 @@ import type { Language, CaseStudy } from '../types'
 
 export const siteConfig = {
   name: 'Nayara Gracioli',
-  email: 'SEU_EMAIL_AQUI',
-  linkedin: 'SEU_LINKEDIN_AQUI',
-  github: 'SEU_GITHUB_AQUI',
+  email: 'nayaragraciolisa@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/nayaragracioli/',
+  github: 'https://github.com/nayaragracioli',
   resumePt: '/cv-nayara-pt.pdf',
   resumeEn: '/cv-nayara-en.pdf',
 }
