@@ -1,9 +1,22 @@
+import { useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Home } from './pages/Home'
 import { CasePage } from './pages/CasePage'
 import { ui } from './data/site'
 import { useLanguage } from './hooks/useLanguage'
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
+
+  return null
+}
 
 function App() {
   const location = useLocation()
@@ -25,6 +38,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header
         lang={lang}
         labels={copy.nav}

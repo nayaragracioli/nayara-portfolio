@@ -1,12 +1,29 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import type { Language } from '../types'
 import { experience, featured, moreProjects, siteConfig, skills, ui } from '../data/site'
 import { ProjectCard } from '../components/ProjectCard'
 import { HeroVisual } from '../components/Visuals'
+import {
+  LibraryBig,
+  ChartNoAxesCombined,
+  Gamepad2,
+} from 'lucide-react'
 
 type Props = { lang: Language }
 
 export function Home({ lang }: Props) {
+  const location = useLocation()
+
+  useEffect(() => {
+    const id = location.hash.replace('#', '')
+    if (!id) return
+
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [location.hash])
   const copy = ui[lang]
   const emailHref = siteConfig.email.includes('@') ? `mailto:${siteConfig.email}` : '#'
   const resumeHref = lang === 'pt' ? siteConfig.resumePt : siteConfig.resumeEn
@@ -34,20 +51,76 @@ export function Home({ lang }: Props) {
           </div>
         </section>
 
-        <section id="about" className="section-space border-y border-slate-200 bg-white">
-          <div className="container-page grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
-            <div>
+        <section
+          id="about"
+          className="section-space border-y border-slate-200 bg-white"
+        >
+          <div className="container-page">
+
+            <div className="mb-10">
               <p className="eyebrow">{copy.about.eyebrow}</p>
-              <h2 className="section-title mt-5">{copy.about.title}</h2>
             </div>
-            <div className="lg:pt-12">
-              <p className="body-copy">{copy.about.p1}</p>
-              <p className="body-copy mt-5">{copy.about.p2}</p>
-              <div className="mt-8 flex flex-wrap gap-2">
-                {['Software Development', 'Digital Products', 'Accessibility', 'AI-Assisted Development'].map((item) => (
-                  <span key={item} className="pill">{item}</span>
-                ))}
+
+            <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+
+              {/* Foto */}
+              <div className="relative mx-auto w-full max-w-[420px] lg:mx-0">
+
+                {/* detalhe visual atrás da foto */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-4 -right-4 h-full w-full rounded-[2rem] bg-gradient-to-br from-violet/20 to-blue/20"
+                />
+
+                {/* detalhe superior */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-5 -top-5 h-24 w-24 rounded-full bg-violet/10 blur-2xl"
+                />
+
+                <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-100 shadow-soft">
+                  <img
+                    src="/nayara-profile.jpeg"
+                    alt="Nayara Gracioli"
+                    className="aspect-[4/5] h-full w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
+
               </div>
+
+              {/* Conteúdo */}
+              <div>
+
+                <h2 className="section-title max-w-3xl">
+                  {copy.about.title}
+                </h2>
+
+                <div className="mt-8 max-w-2xl">
+                  <p className="body-copy">
+                    {copy.about.p1}
+                  </p>
+
+                  <p className="body-copy mt-5">
+                    {copy.about.p2}
+                  </p>
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-2">
+                  {[
+                    'Software Development',
+                    'Digital Products',
+                    'Accessibility',
+                    'AI-Assisted Development',
+                  ].map((item) => (
+                    <span key={item} className="pill">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
+              </div>
+
             </div>
           </div>
         </section>
@@ -85,18 +158,44 @@ export function Home({ lang }: Props) {
             </div>
 
             <div className="mt-12 grid gap-5 lg:grid-cols-3">
-              {moreProjects[lang].map((project) => (
-                <article key={project.title} className="card flex min-h-[330px] flex-col p-7 transition duration-200 hover:-translate-y-1">
-                  <div className="mb-10 h-12 w-12 rounded-2xl bg-gradient-to-br from-violet/15 to-blue/15" />
-                  <h3 className="font-display text-2xl font-extrabold tracking-[-.025em]">{project.title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-slate-600">{project.text}</p>
-                  <div className="mt-auto pt-8">
-                    <p className="text-xs font-bold text-ink">{project.stack}</p>
-                    <p className="mt-2 text-xs leading-5 text-slate-500">{project.focus}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
+  {moreProjects[lang].map((project, index) => {
+    const Icon =
+      index === 0
+        ? LibraryBig
+        : index === 1
+        ? ChartNoAxesCombined
+        : Gamepad2
+
+    return (
+      <article
+        key={project.title}
+        className="group card flex min-h-[330px] flex-col p-7 transition duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+      >
+        <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-2xl border border-violet/10 bg-gradient-to-br from-violet/10 to-blue/10 text-violet transition duration-300 group-hover:scale-105 group-hover:bg-violet group-hover:text-white">
+          <Icon size={22} strokeWidth={1.8} />
+        </div>
+
+        <h3 className="font-display text-2xl font-extrabold tracking-[-.025em]">
+          {project.title}
+        </h3>
+
+        <p className="mt-4 text-sm leading-6 text-slate-600">
+          {project.text}
+        </p>
+
+        <div className="mt-auto pt-8">
+          <p className="text-xs font-bold text-ink">
+            {project.stack}
+          </p>
+
+          <p className="mt-2 text-xs leading-5 text-slate-500">
+            {project.focus}
+          </p>
+        </div>
+      </article>
+    )
+  })}
+</div>
           </div>
         </section>
 

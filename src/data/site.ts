@@ -133,7 +133,7 @@ export const featured = {
       id: 'ai-pipeline',
       title: 'Pipeline de Produção de Livros Digitais com IA',
       summary: 'Evolução e validação de um fluxo assistido por Inteligência Artificial criado para automatizar etapas repetitivas e tornar a produção de livros digitais mais rápida e consistente.',
-      stack: [],
+      stack: ['AI Studio', 'JSON', 'HTML'],
       focus: ['AI', 'Automation', 'Testing', 'Process Improvement'],
     },
   ],
@@ -157,7 +157,7 @@ export const featured = {
       id: 'ai-pipeline',
       title: 'AI-Powered Digital Book Production Pipeline',
       summary: 'Evolution and validation of an AI-assisted workflow designed to automate repetitive steps and make digital book production faster and more consistent.',
-      stack: [],
+      stack: ['AI Studio', 'JSON', 'HTML'],
       focus: ['AI', 'Automation', 'Testing', 'Process Improvement'],
     },
   ],
@@ -166,7 +166,7 @@ export const featured = {
 export const moreProjects = {
   pt: [
     {
-      title: 'Innovation & Knowledge Sharing Hub',
+      title: 'Hub de Inovação e Compartilhamento de Conhecimento',
       text: 'Hub interno criado por iniciativa própria para centralizar projetos, documentações e conhecimento da equipe em um ambiente colaborativo e fácil de consultar.',
       stack: 'React · JavaScript · Tailwind CSS',
       focus: 'Knowledge Management · Collaboration · Process Improvement',
@@ -209,42 +209,55 @@ export const moreProjects = {
 export const experience = {
   pt: [
     {
-      when: '2025 — atual',
+      when: '2024 — atual',
       place: 'Arco Educação',
       title: 'Software Development · Digital Products · EdTech',
       text: 'Desenvolvimento e evolução de soluções digitais para educação, com atuação em livros digitais, aplicações interativas, acessibilidade, Inteligência Artificial e melhoria de processos.',
     },
     {
-      when: 'Kenzie Academy Brasil',
-      place: 'Front-End Mentor',
-      title: 'Mentoria técnica',
-      text: 'Mentoria técnica em desenvolvimento web, suporte à resolução de problemas e acompanhamento da evolução de estudantes.',
+      when: '2023',
+      place: 'Kenzie Academy Brasil',
+      title: 'Front-End Mentor',
+      text: 'Mentoria técnica em desenvolvimento web, code review, suporte à resolução de problemas e acompanhamento da evolução de estudantes.',
     },
     {
-      when: 'Experiências anteriores',
-      place: 'Engineering · Research · Leadership',
-      title: 'Base analítica',
-      text: 'Minha trajetória anterior à tecnologia inclui melhoria contínua, análise de processos, pesquisa científica e liderança — experiências que construíram a base analítica que aplico hoje no desenvolvimento de software.',
+      when: '2018 · 2021 — 2023',
+      place: 'Engineering & Research',
+      title: 'Process Improvement · Data Analysis · Research',
+      text: 'Experiências em pesquisa científica, engenharia de manufatura, melhoria contínua e análise de processos, desenvolvendo uma base sólida em análise de dados, investigação de problemas e construção de soluções estruturadas.',
+    },
+    {
+      when: '2019 — 2020',
+      place: 'Leadership',
+      title: 'Strategic Planning · People & Process Management',
+      text: 'Atuação em empresa júnior, evoluindo de uma função administrativo-financeira para a Vice-Presidência, com experiência em planejamento estratégico, gestão de pessoas, organização de processos e tomada de decisão.',
     },
   ],
+
   en: [
     {
-      when: '2025 — Present',
+      when: '2024 — Present',
       place: 'Arco Educação',
       title: 'Software Development · Digital Products · EdTech',
       text: 'Development and evolution of digital solutions for education, working with digital books, interactive applications, accessibility, Artificial Intelligence, and process improvement.',
     },
     {
-      when: 'Kenzie Academy Brasil',
-      place: 'Front-End Mentor',
-      title: 'Technical mentoring',
-      text: 'Technical mentoring in web development, problem-solving support, and guidance throughout students learning journeys.',
+      when: '2023',
+      place: 'Kenzie Academy Brasil',
+      title: 'Front-End Mentor',
+      text: 'Technical mentoring in web development, code review, problem-solving support, and guidance throughout students’ learning journeys.',
     },
     {
-      when: 'Previous experience',
-      place: 'Engineering · Research · Leadership',
-      title: 'Analytical foundation',
-      text: 'My experience before software includes continuous improvement, process analysis, scientific research, and leadership — areas that built the analytical foundation I apply to software development today.',
+      when: '2018 · 2021 — 2023',
+      place: 'Engineering & Research',
+      title: 'Process Improvement · Data Analysis · Research',
+      text: 'Experience in scientific research, manufacturing engineering, continuous improvement, and process analysis, building a strong foundation in data analysis, problem investigation, and structured problem-solving.',
+    },
+    {
+      when: '2019 — 2020',
+      place: 'Leadership',
+      title: 'Strategic Planning · People & Process Management',
+      text: 'Experience in a junior enterprise, progressing from an administrative and financial role to Vice-President, with responsibilities in strategic planning, people management, process organization, and decision-making.',
     },
   ],
 }
@@ -282,8 +295,8 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Contexto e desafio',
           paragraphs: [
-            'O projeto representava a criação de um novo modelo de livro digital para uma frente de produto que ainda não possuía uma aplicação anterior para simplesmente reutilizar.',
-            'O desafio não era apenas digitalizar o conteúdo, mas oferecer uma experiência intuitiva para professores e estudantes, contemplar acessibilidade e criar uma base técnica que pudesse evoluir e ser reaproveitada em materiais futuros.',
+            'O projeto representava a criação do primeiro livro digital da marca, o que exigia construir uma nova solução técnica em vez de partir de uma aplicação já existente.',
+            'O desafio não era apenas transformar o conteúdo em uma experiência digital, mas criar uma aplicação intuitiva e acessível para professores e estudantes, além de estabelecer uma base técnica reutilizável e capaz de evoluir para os próximos materiais.',
           ],
         },
         {
@@ -314,7 +327,7 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Resultado',
           paragraphs: [
-            'A solução foi bem recebida pelos especialistas e passou a servir como referência interna para a evolução de outros livros digitais.',
+            'A solução foi bem recebida pelos especialistas da marca e se tornou uma referência interna para a construção e evolução de outros livros digitais.',
             'Além da entrega em si, o projeto estabeleceu uma base reutilizável e evolutiva para futuras experiências digitais.',
           ],
         },
@@ -331,7 +344,7 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
       eyebrow: 'INICIATIVA PROATIVA',
       title: 'Livro Digital Interativo para Educação Infantil',
       summary: 'Uma oportunidade identificada de forma independente que evoluiu de pesquisa e prototipação para uma nova experiência digital voltada à Educação Infantil.',
-      role: 'Software Developer · Product Initiative',
+      role: 'Software Developer · End-to-End Initiative',
       stack: ['React', 'JavaScript', 'Tailwind CSS'],
       focus: ['Product Discovery', 'UX/UI', 'AI-Assisted Development'],
       context: 'EdTech · Early Childhood Education',
@@ -354,8 +367,8 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Minha atuação',
           paragraphs: [
-            'Fui responsável pela iniciativa de ponta a ponta, desde a identificação da oportunidade e concepção da solução até o design da experiência, desenvolvimento técnico e validação do piloto.',
-            'Assumi tanto as decisões de UX/UI quanto toda a implementação técnica utilizando React, JavaScript e Tailwind CSS.',
+            'Fui responsável pela iniciativa de ponta a ponta, desde a identificação da oportunidade e concepção da solução até a definição da experiência, desenvolvimento técnico e validação do piloto.',
+            'Além de estruturar a proposta do produto, defini como as interações e a interface funcionariam e fui responsável por toda a implementação técnica utilizando React, JavaScript e Tailwind CSS.',
             'Durante o desenvolvimento, utilizei ferramentas de Inteligência Artificial como apoio para acelerar a implementação e explorar soluções, mantendo sob minha responsabilidade os direcionamentos, decisões técnicas, validação do código e resultado final.',
           ],
         },
@@ -379,9 +392,9 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Resultado',
           paragraphs: [
-            'A proposta foi muito bem recebida pela liderança, especialistas e coordenações, que reconheceram uma evolução significativa em relação à experiência anterior.',
-            'Durante o processo, descobri também que escolas já começavam a questionar quando haveria uma experiência digital mais interativa para a Educação Infantil, mostrando que a oportunidade identificada de forma independente estava alinhada a uma necessidade real dos usuários.',
-            'A solução passou a servir como referência para materiais digitais de Educação Infantil previstos para 2027.',
+            'A proposta foi muito bem recebida pela liderança, especialistas e coordenações, que reconheceram uma evolução significativa em relação à experiência digital anterior.',
+            'Durante a validação, também identifiquei que escolas já começavam a questionar quando teriam acesso a uma experiência digital mais interativa para a Educação Infantil. Esse retorno reforçou que a oportunidade identificada de forma proativa estava alinhada a uma necessidade real dos usuários.',
+            'A solução passou a servir como referência para a evolução dos materiais digitais de Educação Infantil previstos para 2027, transformando uma oportunidade inicialmente identificada sem uma demanda formal em uma proposta concreta de evolução do produto.',
           ],
         },
       ],
@@ -390,8 +403,8 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
       id: 'ai-pipeline',
       title: 'Pipeline de Produção de Livros Digitais com IA',
       summary: 'Evolução e validação de um fluxo assistido por Inteligência Artificial criado para automatizar etapas repetitivas e tornar a produção de livros digitais mais rápida e consistente.',
-      role: 'Software Developer · Testing, Validation & Process Evolution',
-      stack: [],
+      role: 'Software Developer · Validation & Process Improvement',
+      stack: ['AI Studio', 'JSON', 'HTML'],
       focus: ['AI-Assisted Development', 'Automation', 'Process Improvement', 'Quality Assurance'],
       context: 'EdTech · Digital Production',
       sections: [
@@ -405,8 +418,9 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Minha atuação',
           paragraphs: [
-            'A iniciativa foi inicialmente desenvolvida pelo especialista de desenvolvimento da equipe e posteriormente compartilhada com os desenvolvedores responsáveis pela frente de livros digitais.',
-            'Como outro desenvolvedor assumiu a principal responsabilidade pela implementação da ferramenta, minha atuação concentrou-se na evolução do fluxo de produção, testes, validação dos resultados e identificação de melhorias necessárias para que a solução pudesse ser utilizada no processo real.',
+            'A iniciativa foi inicialmente criada pelo especialista de desenvolvimento da equipe e posteriormente compartilhada com os desenvolvedores responsáveis pela frente de livros digitais.',
+            'Minha atuação concentrou-se em transformar a solução em um fluxo aplicável à produção real: testei diferentes materiais, validei os resultados gerados, avaliei qualidade e tempo de processamento e documentei problemas e oportunidades de melhoria.',
+            'Nas primeiras etapas, esses ajustes eram encaminhados ao desenvolvedor responsável pela implementação. Com a evolução do projeto e maior domínio da solução, passei também a realizar diretamente correções e melhorias quando identifico problemas que posso solucionar.',
           ],
         },
         {
@@ -416,11 +430,11 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
             'Por se tratar de conteúdo educacional destinado a um produto final, a automação não elimina a validação humana: os resultados precisam ser revisados e testados antes de seguirem para produção.',
           ],
           bullets: [
-            'Source Material',
-            'Content Structuring',
-            'AI-Assisted Processing',
-            'Digital Output',
-            'Human Validation',
+            'Material de origem',
+            'Estruturação do conteúdo',
+            'Processamento assistido por IA',
+            'Saída digital',
+            'Validação humana',
           ],
         },
         {
@@ -454,8 +468,8 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Context & challenge',
           paragraphs: [
-            'The project involved creating a new digital book model for a product area that did not yet have an existing application to simply reuse.',
-            'The challenge was not only to digitize content, but to provide an intuitive experience for teachers and students, address accessibility, and create a technical foundation that could evolve and be reused across future materials.',
+            "The project involved creating the brand's first digital book, which required building a new technical solution rather than starting from an existing application.",
+            'The challenge was not only to transform the content into a digital experience, but also to create an intuitive and accessible application for teachers and students while establishing a reusable technical foundation that could evolve for future materials.',
           ],
         },
         {
@@ -486,7 +500,7 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Outcome',
           paragraphs: [
-            'The solution was well received by specialists and became an internal reference for the evolution of other digital books.',
+            "The solution was well received by the brand's education specialists and became an internal reference for the development and evolution of other digital books.",
             'Beyond the delivery itself, the project established a reusable and evolvable foundation for future digital experiences.',
           ],
         },
@@ -503,7 +517,7 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
       eyebrow: 'PROACTIVE INITIATIVE',
       title: 'Interactive Digital Book for Early Childhood Education',
       summary: 'An independently identified opportunity that evolved from research and prototyping into a new digital experience for Early Childhood Education.',
-      role: 'Software Developer · Product Initiative',
+      role: 'Software Developer · End-to-End Initiative',
       stack: ['React', 'JavaScript', 'Tailwind CSS'],
       focus: ['Product Discovery', 'UX/UI', 'AI-Assisted Development'],
       context: 'EdTech · Early Childhood Education',
@@ -526,9 +540,9 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'My role',
           paragraphs: [
-            'I owned the initiative end to end, from identifying the opportunity and shaping the solution to experience design, technical development, and pilot validation.',
-            'I was responsible for both UX/UI decisions and the full technical implementation using React, JavaScript, and Tailwind CSS.',
-            'During development, I used Artificial Intelligence tools to accelerate implementation and explore solutions while keeping technical direction, decisions, code validation, and final results under my responsibility.',
+            'I led the initiative end to end, from identifying the opportunity and shaping the solution to defining the experience, technical development, and pilot validation.',
+            'In addition to structuring the product proposal, I defined how the interactions and interface would work and was responsible for the entire technical implementation using React, JavaScript, and Tailwind CSS.',
+            'During development, I used Artificial Intelligence tools to accelerate implementation and explore solutions, while remaining responsible for the overall direction, technical decisions, code validation, and final outcome.',
           ],
         },
         {
@@ -551,9 +565,9 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'Outcome',
           paragraphs: [
-            'The proposal was very well received by leadership, specialists, and coordinators, who recognized a significant improvement over the previous experience.',
-            'During the process, I also learned that schools had already started asking when a more interactive digital book experience would become available for Early Childhood Education, showing that the opportunity I had identified independently was aligned with emerging user demand.',
-            'The solution became a reference for Early Childhood digital materials planned for 2027.',
+            'The proposal was very well received by leadership, education specialists, and coordinators, who recognized a significant improvement over the previous digital experience.',
+            'During validation, I also learned that schools had already started asking when a more interactive digital experience for Early Childhood Education would become available. This feedback reinforced that the opportunity I had proactively identified was aligned with a real user need.',
+            'The solution became a reference for the evolution of Early Childhood Education digital materials planned for 2027, turning an opportunity initially identified without a formal request into a concrete product evolution proposal.',
           ],
         },
       ],
@@ -562,8 +576,8 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
       id: 'ai-pipeline',
       title: 'AI-Powered Digital Book Production Pipeline',
       summary: 'Evolution and validation of an AI-assisted workflow designed to automate repetitive steps and make digital book production faster and more consistent.',
-      role: 'Software Developer · Testing, Validation & Process Evolution',
-      stack: [],
+      role: 'Software Developer · Validation & Process Improvement',
+      stack: ['AI Studio', 'JSON', 'HTML'],
       focus: ['AI-Assisted Development', 'Automation', 'Process Improvement', 'Quality Assurance'],
       context: 'EdTech · Digital Production',
       sections: [
@@ -577,8 +591,9 @@ export const caseStudies: Record<Language, CaseStudy[]> = {
         {
           title: 'My role',
           paragraphs: [
-            'The initiative was initially developed by the team development specialist and later shared with the developers responsible for the digital book area.',
-            'While another developer took the main responsibility for implementing the tool, my work focused on evolving the production workflow, testing, validating outputs, and identifying improvements needed for real production use.',
+            "The initiative was initially created by the team's development specialist and later shared with the developers responsible for the digital book workflow.",
+            'My role focused on turning the solution into a workflow that could be used in real production: I tested different materials, validated generated outputs, evaluated quality and processing time, and documented issues and improvement opportunities.',
+            'In the early stages, these adjustments were passed to the developer responsible for implementation. As the project evolved and I gained a deeper understanding of the solution, I also began implementing fixes and improvements directly when I identified issues I could solve.',
           ],
         },
         {

@@ -30,9 +30,12 @@ export function CasePage({ lang }: Props) {
 
         <div className="mt-10 max-w-5xl">
           {current.eyebrow && <p className="eyebrow">{current.eyebrow}</p>}
-          <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-[-.04em] sm:text-5xl lg:text-7xl">
-            {current.title}
-          </h1>
+          <h1
+  className="mt-4 font-display text-4xl font-extrabold tracking-[-.04em] sm:text-5xl lg:text-7xl"
+  style={{ lineHeight: '1.15' }}
+>
+  {current.title}
+</h1>
           <p className="body-copy mt-7 max-w-3xl">{current.summary}</p>
         </div>
 

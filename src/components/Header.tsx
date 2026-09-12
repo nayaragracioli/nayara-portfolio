@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import type { Language } from '../types'
 import { siteConfig } from '../data/site'
 
@@ -17,15 +17,30 @@ type Props = {
 
 export function Header({ lang, labels, onLanguageChange }: Props) {
   const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
   const home = `/${lang}`
 
   const nav = [
-    [labels.about, `${home}#about`],
-    [labels.work, `${home}#work`],
-    [labels.experience, `${home}#experience`],
-    [labels.skills, `${home}#skills`],
-    [labels.contact, `${home}#contact`],
-  ]
+    { label: labels.about, id: 'about' },
+    { label: labels.work, id: 'work' },
+    { label: labels.experience, id: 'experience' },
+    { label: labels.skills, id: 'skills' },
+    { label: labels.contact, id: 'contact' },
+  ] as const
+
+  const scrollToSection = (id: string) => {
+    setOpen(false)
+    const element = document.getElementById(id)
+
+    if (element && location.pathname === home) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      window.history.replaceState(null, '', `${home}#${id}`)
+      return
+    }
+
+    navigate(`${home}#${id}`)
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-canvas/90 backdrop-blur-xl">
@@ -35,10 +50,15 @@ export function Header({ lang, labels, onLanguageChange }: Props) {
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
-          {nav.map(([label, href]) => (
-            <Link key={href} to={href} className="text-sm font-medium text-slate-600 transition hover:text-ink">
+          {nav.map(({ label, id }) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => scrollToSection(id)}
+              className="text-sm font-medium text-slate-600 transition hover:text-ink"
+            >
               {label}
-            </Link>
+            </button>
           ))}
           <div className="ml-2 flex items-center rounded-full border border-slate-200 bg-white p-1">
             {(['pt', 'en'] as Language[]).map((item) => (
@@ -71,15 +91,15 @@ export function Header({ lang, labels, onLanguageChange }: Props) {
       {open && (
         <div className="border-t border-slate-200 bg-canvas lg:hidden">
           <nav className="container-page flex flex-col py-4">
-            {nav.map(([label, href]) => (
-              <Link
-                key={href}
-                to={href}
-                onClick={() => setOpen(false)}
-                className="border-b border-slate-200 py-4 text-sm font-semibold"
+            {nav.map(({ label, id }) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => scrollToSection(id)}
+                className="border-b border-slate-200 py-4 text-left text-sm font-semibold"
               >
                 {label}
-              </Link>
+              </button>
             ))}
             <div className="flex gap-2 pt-4">
               {(['pt', 'en'] as Language[]).map((item) => (
